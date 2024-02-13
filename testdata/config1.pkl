@@ -1,0 +1,21 @@
+apps { 
+  http {
+    servers {
+        hello {
+            listen {
+                "localhost:2020"
+            }
+            routes {
+                new {
+                    handle {
+                        new {
+                            body = "Hello, world!"
+                            handler = "static_response"
+                        }
+                    }
+                }
+            }
+        }
+    }
+  }
+}
